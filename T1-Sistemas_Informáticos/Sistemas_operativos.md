@@ -72,7 +72,7 @@ El sistema operativo dispone de tres mecanismos de acceso al núcleo, pero el ú
 
 Un salto no programado se produce cuando el procesador ejecuta la instrucción de lenguaje máquina con saltos no programados. En la ejecución de esta orden están implicadas tres acciones: el cambio de modo de ejecución de modo usuario a modo núcleo, la ejecución de una rutina de servicio y el cambio de modo de ejecución de modo núcleo a modo usuario.
 
-## Núcleo de Sistemas Operativos UNIX
+### Núcleo de Sistemas Operativos UNIX
 
 El núcleo del sistema operativo Unix (llamado kernel) es un programa escrito casi todo en lenguaje C, excepto de una parte correspondiente a la manipulación de interrupciones, expresada en el lenguaje ensamblador del procesador en que opera.
 
@@ -87,7 +87,7 @@ Lo kernel consta de dos partes principales:
 
 En términos generales, cada vez que un usuario utiliza cualquier tecla de un ordenador, o que se tenga que leer o escribir información desde las unidades magnéticas, se interrumpe el procesador y el núcleo se encarga de efectuar la operación de transferencia.
 
-## Administrador de memoria
+### Administrador de memoria
 
 Este módulo se encarga de asignar ciertas porciones de la memoria principal (RAM) a los diferentes programas o partes de los programas que la necesitan, mientras que el resto de datos y los programas se mantienen en los dispositivos de almacenamiento masivo, como un HDD o un SDD.
 
@@ -116,7 +116,7 @@ Un administrador de memoria necesita cinco funciones básicas:
 >
 >La forma más común de administración de la memoria implica crear una **memoria virtual**; con este sistema, la memoria del ordenador aparece, para cualquier usuario del sistema, más grande del que es.
 
-## Sistema de entrada/salida (E/S)
+### Sistema de entrada/salida (E/S)
 
 Este componente presenta al usuario los datos como una cuestión independiente del dispositivo; es decir, para los usuarios, todos los dispositivos tienen las mismas características y son tratados del mismo modo, en qué es el sistema operativo el responsable de atender las particularidades de cada uno.
 
@@ -144,7 +144,7 @@ Las técnicas más utilizadas por los sistemas operativos para gestionar las ent
 - **Gestión de colas o *spooling*** (simultaneous peripheral operation en línea). Los datos de salida se almacenan de manera temporal en una cola situada en un dispositivo de almacenamiento masivo (lo spool), hasta que el dispositivo periférico correspondiendo se encuentra libre; de este modo se evita que un programa quede retenido porque el periférico no está disponible. El sistema operativo dispone de llamamientos para añadir y eliminar archivos de la cola del gestor de colas (spooler).
 - **Buffering.** Espacios de memoria principal que se reservan para el almacenamiento intermedio de los datos que vienen o van a los dispositivos de E/S; así se consiguen compensar las diferentes velocidades que presentan los dispositivos externos y los dispositivos internos, y se incrementa la eficiencia del sistema sobre todo en los sistemas operativos multiprogramación.
 
-## Administrador de archivos
+### Administrador de archivos
 
 Esta parte del sistema operativo se encarga de mantener la estructura de los datos y los programas del sistema correspondientes a los diferentes usuarios y de asegurar el uso efectivo de los medios de almacenamiento masivo.
 
@@ -164,7 +164,7 @@ Hay unas condiciones básicas que todo gestor de archivos tiene que conceder a t
 
 Hay diferentes sistemas de archivo, es decir, diferentes maneras de organizar la información que se almacena en las memorias de los ordenadores como, por ejemplo: FAT, FAT32, EXT3, NTFS, XFS, etc.
 
-## Sistema de protección
+### Sistema de protección
 
 Como los sistemas operativos son cada vez es más complejos, el número de errores relacionados con la seguridad cada vez es mayor.
 
@@ -174,35 +174,140 @@ Aquí se gestionan los mecanismos que controlan el acceso en los programas o a l
 
 Hay desarrollados diferentes modelos genéricos de protección de recursos para los sistemas operativos, para controlar el acceso de los usuarios a los recursos que pueden ser protegidos o para controlar el mismo sistema operativo, que a veces puede tener un acceso no apropiado. A continuación veremos algunos de los modelos de protección más importantes:
 
-- Modelo de la matriz de acceso: se trata de definir una matriz en función del conjunto de permisos de acceso (lectura, escritura, etc.) que especifica los diferentes permisos que tiene el sujeto para cada objeto en función de las operaciones que puede hacer. Matriz[sujeto,objeto].
+- Modelo de la matriz de acceso: se trata de definir una matriz en función del conjunto de permisos de acceso (lectura, escritura, etc.) que especifica los diferentes permisos que tiene el usuario para cada objeto en función de las operaciones que puede hacer. Matriz[usuario,objeto].
 - Modelo de seguridad con acreditación y con información clasificada:
     - Cabe usuario no puede leer la información clasificada por encima de su nivel de acreditación.
     - Ningún usuario puede rebajar la clasificación de la información.
 
-## Interfaces de usuario de los sistemas operativos
+### Interfaces de usuario de los sistemas operativos
 
 Una interfaz de usuario es el conjunto de elementos con que los usuarios se comunican o interaccionan con los ordenadores u otras máquinas.
 
 Los sistemas operativos ofrecen dos tipos diferentes de interfaces de usuario:
 
-- Interfaces de usuario alfanuméricas o de línea de órdenes
-- Interfaces gráficas de usuario
+- Interfaces de usuario alfanuméricas o de **línea de órdenes**
+- **Interfaces gráficas de usuario**
 
-Las interfaces de usuario de línea de órdenes (o CLI, del inglés command line interface) ofrecen un entorno textual en que el usuario puede introducir instrucciones o órdenes que el entorno interpretará y el sistema operativo ejecutará.
+Las interfaces de usuario de **línea de órdenes** (o **CLI**, del inglés *command line interface*) ofrecen un entorno textual en que el usuario puede introducir instrucciones o órdenes que el entorno interpretará y el sistema operativo ejecutará.
 
-Una interfaz gráfica de usuario (o GUI, del inglés Graphic User Interface) es una interfaz de usuario que utiliza elementos gráficos y el lenguaje visual para interactuar de manera intuitiva con el sistema.
+Una **interfaz gráfica de usuario** (o **GUI**, del inglés *Graphic User Interface*) es una interfaz de usuario que utiliza elementos gráficos y el lenguaje visual para interactuar de manera intuitiva con el sistema.
 
 Las interfaces gráficas de usuario que ofrecen los sistemas operativos actuales requieren, básicamente, la interacción del usuario por medio del ratón, a pesar de que también suelen ofrecer apoyo para la interacción por medio del teclado.
 
 Los elementos gráficos que suelen incluir las interfaces gráficas de usuario son los siguientes:
 
-- Sistemas de ventanas, que permiten organizar cada tarea del usuario en una ventana diferente.
-- Iconos o imágenes pequeñas que representan objetos del sistema que puede utilizar el usuario para realizar sus tareas.
-- Botones y barras de herramientas integradas por conjuntos de botones con funcionalidades parecidas.
-- Sistemas de menús desplegables, agrupados según funcionalidades.
-- Barras de desplazamiento verticales y horizontales para visualizar varias zonas de la pantalla.
-- Pestañas, que organizan las diversas partes de una tarea sub-pantallas.
+- **Sistemas de ventanas**, que permiten organizar cada tarea del usuario en una ventana diferente.
+- **Iconos o imágenes pequeñas** que representan objetos del sistema que puede utilizar el usuario para realizar sus tareas.
+- **Botones y barras de herramientas** integradas por conjuntos de botones con funcionalidades parecidas.
+- **Sistemas de menús desplegables**, agrupados según funcionalidades.
+- **Barras de desplazamiento verticales y horizontales** para visualizar varias zonas de la pantalla.
+- **Pestañas**, que organizan las diversas partes de una tarea sub-pantallas.
 
 Actualmente tanto los sistemas operativos como las interfaces de las aplicaciones ofrecen interfaces gráficas de usuario muy evolucionadas, basadas en criterios de usabilidad, muy intuitivas y teniendo en consideración las características psicológicas de las personas.
 
 A pesar de que hay otros tipos de interfaces de usuario (como por ejemplo interfaces basadas en el reconocimiento de la voz, táctiles o basadas en menús), los sistemas operativos ofrecen de manera generalizada los dos sistemas básicos: interfaz gráfica de usuario e interfaz de línea de órdenes. Pero, a veces, pueden ofrecer de manera adicional otros tipos de interfaces.
+
+## Objetivos de un sistema operativo
+
+- Incrementar la productividad de los usuarios (facilitando el uso).
+- Proporcionar un entorno cómodo y una abstracción del hardware al usuario.
+- Optimizar la utilización de los componentes o recursos del hardware.
+- Gestionar los recursos del hardware y del software
+- Decidir quién, cuando, como y durante cuánto de tiempo se utiliza un recurso.
+- Resolver conflictos entre peticiones concurrentes de recursos, preservando la integridad del sistema.
+- Maximizar el rendimiento del sistema informático.
+- Permitir la concurrencia de procesos.
+- Posibilitar la ejecución de cualquier proceso en el momento que se solicite, siempre que haya suficientes recursos libres para él.
+- Ser eficiente en cuanto a reducir el tiempo que ocupa cada trabajo, el tiempo que no se utiliza la CPU, el tiempo de respuesta en sistemas multiacceso y el plazo entre dos asignaciones de CPU en un mismo programa.
+- Ser eficiente en cuanto a aumentar la utilización de recursos en general, como por ejemplo la memoria, los procesadores, los dispositivos de E/S, etc.
+- Ser fiable, es decir, un sistema operativo no tiene que tener errores y tiene que prever todas las posibles situaciones.
+- Posibilitar y facilitar tanto como se pueda el diálogo entre el hardware y usuario.
+- Permitir compartir entre varios usuarios los recursos de hardware que tiene un ordenador.
+- Permitir a los usuarios compartir datos entre ellos, en caso necesario.
+- Facilitar las operaciones de E/S de los diferentes dispositivos conectados a un ordenador.
+
+## Funciones del sistema operativo
+
+- Da comodidad. Un sistema operativo hace más fácil el uso del ordenador.
+- Da eficiencia. Un sistema operativo permite que los recursos del ordenador se usen de la manera más eficiente posible.
+- Tiene habilidad para evolucionar. Un sistema operativo se tendrá que construir de forma que permita el desarrollo, prueba o introducción efectiva de nuevas funciones sin interferir con el servicio.
+- Se encarga de administrar el hardware. El sistema operativo se encarga de manipular de la mejor manera los recursos del ordenador en cuanto al hardware, esto es, asignar a cada proceso una parte del procesador para poder compartir los recursos.
+- Relaciona dispositivos (gestionarlos a través del núcleo del S.O). El sistema operativo se tiene que encargar de comunicar los usuarios con los dispositivos periféricos, cuando los usuarios lo pidan.
+- Organiza los datos para un acceso rápido y seguro.
+- Gestiona las comunicaciones en red. El sistema operativo permite al usuario manipular con gran facilidad todo aquello que hace referencia a la instalación y uso de las redes de ordenadores.
+- Facilita las entradas y salidas. Un sistema operativo permite hacer más fácil al usuario el acceso y manipulación de los dispositivos de entrada/salida del ordenador.
+- Da técnicas de recuperación de errores.
+- Evita que otros usuarios interfieran. El sistema operativo evita que los usuarios se bloqueen entre ellos, informándolos si esta aplicación lo está utilizando otro usuario.
+- Genera estadísticas.
+- Comparte el hardware y los datos entre los usuarios.
+- Facilita la gestión de la memoria.
+- Acepta los trabajos y permite conservarlos hasta que finalizan.
+- Detecta errores y actúa de manera apropiada en el supuesto de que se produzcan.
+- Controla las operaciones de E/S.
+- Controla las interrupciones.
+- Planifica la ejecución de tareas.
+- Entrega los recursos a las tareas.
+- Retira los recursos de las tareas.
+- Protege la memoria contra el acceso indebido de los programas.
+- Soporta el multiacceso.
+- Proporciona al usuario una manipulación fácil de todo el sistema.
+- Aprovecha los tiempos muertos del procesador.
+- Comparte los recursos de las máquinas entre varios procesos al mismo tiempo.
+- Administra de manera eficaz el sistema como un todo.
+- Permite que los diferentes usuarios se puedan comunicar entre ellos, así como los protege unos otros.
+- Da a los usuarios la facilidad de utilizar de manera sencilla todos los recursos y facilidades del sistema.
+- Administra y organiza los recursos para utilizarlos de la mejor manera posible.
+- Controla el acceso a los recursos del sistema.
+
+En general se puede decir que un sistema operativo tiene las siguientes funciones.
+
+1. **Gestión de procesos**: La gestion de procesos en un sistema operativo se engarga de organizar los procesos del sistema, siendo un proceso un programa en funcionamiento.
+
+    El ciclo de vida de un proceso comienza cuando un programa se ejecuta hasta que finaliza su ejecución y es el Sistema operativo quien se encarga de determinar:
+    - Cuando puede usar la CPU
+    - Cuando se debe sincronizar si hiciese falta
+    - Cuando puede acceder a los recursos compartidos como memoria, archivos o dispositivos de E/S.
+
+    También se encarga de gestionar procesos de comunicación y coordinación mientras evita posibles fallos como *deadlocks*. De esta forma el sistema operativo se asegura de de un uso eficiente de los recursos del sistema.
+
+    - **Planificación de procesos**. 
+        - Reparte el uso de CPU usando algoritmos de planificación como Round Robin o Planificación por Prioridades.
+        - Hace un reparto justo de la CPU para evitar inanición de procesos de baja prioridad
+        - Maximiza el uso de CPU determinando qué proceso se ejecuta en que momento.
+    - **Sincronización de procesos**. 
+        - Coordina varios procesos de forma simultanea para asegurar un orden de ejecucion y evitar deadlocks.
+        - Utiliza mecanismos de sincronización como los semáforos para coordinar los procesos.
+
+2. **Gestión de memoria**: La gestión de memoria es una tarea esencial del sistema operativo que consiste en permitir el movimiento de los datos entre memoria principal y almacenamiento secundario. También permite la interacción entre memoria volátil y almacenamiento persistente.
+
+    ![alt text](../img/memoria.png)
+
+    - **Gestión de memoria principal**
+        - Asigna memoria usando tecnicas como el paginado o la segmentación.
+        - Libera memoria cuando ya no es necesaria
+        - Previene que los procesos no accedan a la memoria mientras esta siendo usada por otros procesos.
+        - Usa espacio de disco como memoria adicional para permitir usar procesos de mayor tamaño. Esto se conoce como memoria virtual.
+        - Fragmentación
+
+    - **Gestión de memoria secundaria**
+        - Organiza como esta la información distribuida en el disco.
+        - Gestiona ficheros y directorios para accesos a datos mas eficientes.
+        - Gestiona es espacio libre en el disco.
+        - Organiza el orden en el cual se realizan peticiones de lectura o escritura.
+        - Permite que la información se pueda recuperar cuando surja un fallo.
+
+3. **Gestión del sistema de ficheros**
+
+--WIP--
+
+4. **Gestión de dispositivos**
+
+--WIP--
+
+5. **Protección y seguridad**
+
+--WIP--
+
+6. **Otras funciones**
+
+--WIP--
