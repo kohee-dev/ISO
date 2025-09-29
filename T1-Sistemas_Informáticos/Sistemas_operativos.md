@@ -45,7 +45,7 @@ En general, el núcleo se encarga de controlar el resto de los módulos y sincro
 
 - Un **planificador**, el cual se encarga de asignar el tiempo de procesador en los programas, de acuerdo con cierta política de planificación que varía de un sistema operativo a otro. Normalmente se utiliza una jerarquía de prioridades que determinan como se asignará el tiempo de CPU en cada programa. Una política de planificación muy común en los sistemas operativos multiprograma y multiacceso son las técnicas de time-slicing (fracción de tiempo). Se asigna en cada programa cierto intervalo de tiempo del procesador. Si el programa no ha acabado durante este tiempo, vuelve a la cola de programas.
 
-- Submódulo para el control de **interrupciones** (*FLHI, first level interruption handler*). Este submódulo está vinculado al planificador, puesto que se utilizan interrupciones para modificar la seqüencialització del procesos. Es el encargado de dar respuesta a los cuatro tipos de interrupciones:
+- Submódulo para el control de **interrupciones** (*FLHI, first level interruption handler*). Este submódulo está vinculado al planificador, puesto que se utilizan interrupciones para modificar la secuencialización de procesos. Es el encargado de dar respuesta a los cuatro tipos de interrupciones:
     - Interrupciones de programa
     - Interrupciones de reloj del sistema
     - Interrupciones de entrada/salida
@@ -63,7 +63,7 @@ El núcleo del sistema operativo generalmente realiza las funciones siguientes:
 - Comunicación entre procesos.
 - Manipulación de bloques de control de proceso.
 - Apoyo de actividades de E/S.
-- Apoyo de la asignación y desassignació de almacenamiento.
+- Apoyo de la asignación y desasignación de almacenamiento.
 - Apoyo del sistema de archivos.
 - Apoyo de mecanismos de llamamiento/retorno al procedimiento.
 - Apoyo de ciertas funciones estadísticas del sistema.
