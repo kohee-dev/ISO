@@ -298,9 +298,38 @@ En general se puede decir que un sistema operativo tiene las siguientes funcione
 
 3. **Gestión del sistema de ficheros**
 
---WIP--
+    ![alt text](../img/sistema_ficheros.png)
+
+    La gestión de ficheros asegura que el acceso, control y almacenamiento ordenado de los ficheros. El sistema operativo abstrae el almacenamiento físico para presentar un almacenamiento lógico de los ficheros y que asi sea mucho mas fácil trabajar con los datos para un usuario normal.
+
+    Su gestión incluye:
+
+    - **Atributos de un fichero**:
+        - **Nombre del fichero**. Determina el nombre y la extension del fichero: .txt, .jpg, etc.
+        - **Tipo de fichero**. Determina el formato del fichero: Si es ejecutable, imagen, texto, etc.
+        - **Tamaño**. La cantidad de espacio que ocupa el fichero 
+        - **Permisos**. Determina quien puede leer, escribir y ejecutar el fichero.
+
+    - **Tipo de fichero**:
+        - **Texto**. Contienen contenido legible por los humanos. (.txt, .md)
+        - **Binarios**. Almacenan informacion en binario (.jpg, .mp3)
+        - **Ficheros ejecutables**. Contienen codigo de programa. (.exe, .sh)
+    - **Operaciones en ficheros**:
+        - **Create**. Permite a los usuarios crear ficheros.
+        - **Read**. Abre ficheros para leer sus contenidos.
+        - **Write**. Permite modificar el contenido de los ficheros.
+        - **Delete**. Borra un fichero del sistema.
+    - **Métodos de acceso**:
+        - **Acceso secuencial**. Lee datos en orden, de principio a fin.
+        - **Acceso directo**. Salta a una parte especifica del fichero.
+        - **Acceso indexado**. Utiliza un indice para obtener rápidamente la información
+
+    [Mas info](https://www.geeksforgeeks.org/operating-systems/file-systems-in-operating-system/)
+
 
 4. **Gestión de dispositivos**
+    ![alt text](../img/iom.png)
+
 
 --WIP--
 
