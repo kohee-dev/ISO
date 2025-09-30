@@ -301,11 +301,11 @@ En general se puede decir que un sistema operativo tiene las siguientes funcione
         - Permite que la información se pueda recuperar cuando surja un fallo.
     [Mas info](https://www.geeksforgeeks.org/operating-systems/memory-management-in-operating-system/)
 
-3. **Gestión del sistema de ficheros**
+3. **Gestión del sistema de ficheros**:La gestión de ficheros asegura que el acceso, control y almacenamiento ordenado de los ficheros. El sistema operativo abstrae el almacenamiento físico para presentar un almacenamiento lógico de los ficheros y que asi sea mucho mas fácil trabajar con los datos para un usuario normal.
 
     ![alt text](../img/sistema_ficheros.png)
 
-    La gestión de ficheros asegura que el acceso, control y almacenamiento ordenado de los ficheros. El sistema operativo abstrae el almacenamiento físico para presentar un almacenamiento lógico de los ficheros y que asi sea mucho mas fácil trabajar con los datos para un usuario normal.
+    
 
     Su gestión incluye:
 
@@ -332,10 +332,9 @@ En general se puede decir que un sistema operativo tiene las siguientes funcione
     [Mas info](https://www.geeksforgeeks.org/operating-systems/file-systems-in-operating-system/)
 
 
-4. **Gestión de dispositivos**
-    ![alt text](../img/iom.png)
+4. **Gestión de dispositivos**: La gestión de dispositivos es la encargada de manejar la comunicación entre el sistema y los dispositivos hardware, como impresoras, discos o interfaces de red. El sistema operativo proporciona drivers para gestionar los dispositivos usando técnicas como DMA (Direct Memory Access) para la transferencia eficiente de información y estrategias como buffering o spooling para asegurar operaciones sencillas.
 
-    La gestión de dispositivos es la encargada de manejar la comunicación entre el sistema y los dispositivos hardware, como impresoras, discos o interfaces de red. El sistema operativo proporciona drivers para gestionar los dispositivos usando técnicas como DMA (Direct Memory Access) para la transferencia eficiente de información y estrategias como buffering o spooling para asegurar operaciones sencillas.
+    ![alt text](../img/iom.png)
 
     Hay varios componentes que intervienen en la gestión de dispositivos.
 
@@ -351,10 +350,21 @@ En general se puede decir que un sistema operativo tiene las siguientes funcione
     [Mas info](https://www.geeksforgeeks.org/operating-systems/device-management-in-operating-system/)
 
 
-5. **Protección y seguridad**
+5. **Protección y seguridad**: Los mecanismos de proteccion y seguridad de un sistema operativo tienen la funcion de salvaguardar los recursos del sistema de accesos no autorizados o usos malintencionados. Estos mecanismos permiten controlar a que recursos puede acceder cada usuario y permitir que unicamente los usuarios autorizados puedan realizar acciones especificas.
 
---WIP--
+    ![alt text](../img/seguridad.png)
+
+    Tiene las siguientes tareas:
+
+    **Control de acceso**: El sistema operativo se asegura que los usuarios puedan acceder a los recursos a los que están autorizados.
+
+    **Autenticación de usuarios**: Esto se consigue asignando a cada usuario un ID de usuario (UID) y durante el login el sistema verifica los credenciales de dicho usuario.
+
+    **Protección de recursos**. Por medio de los mecanismos previos se asegura la integridad de los recursos del sistema, previniendo uso malintencionado o dañino.
+
+    **Seguridad ante ataques**. El sistema operativo protege el sistema frente amenazas como virus informáticos, gusanos u otros ataques.
+
 
 6. **Otras funciones**
 
---WIP--
+    Ademas de las funciones mencionadas previamente también se puede encargar de monitorizar el rendimiento del sistema para prevenir posibles fallos, controlar el uso de recursos de cada tarea y usuario y producir logs cuando ocurra algún fallo para poder diagnosticar el problema rápidamente.
