@@ -356,13 +356,13 @@ En general se puede decir que un sistema operativo tiene las siguientes funcione
 
     Tiene las siguientes tareas:
 
-    **Control de acceso**: El sistema operativo se asegura que los usuarios puedan acceder a los recursos a los que están autorizados.
+    - **Control de acceso**: El sistema operativo se asegura que los usuarios puedan acceder a los recursos a los que están autorizados.
 
-    **Autenticación de usuarios**: Esto se consigue asignando a cada usuario un ID de usuario (UID) y durante el login el sistema verifica los credenciales de dicho usuario.
+    - **Autenticación de usuarios**: Esto se consigue asignando a cada usuario un ID de usuario (UID) y durante el login el sistema verifica los credenciales de dicho usuario.
 
-    **Protección de recursos**. Por medio de los mecanismos previos se asegura la integridad de los recursos del sistema, previniendo uso malintencionado o dañino.
+    - **Protección de recursos**. Por medio de los mecanismos previos se asegura la integridad de los recursos del sistema, previniendo uso malintencionado o dañino.
 
-    **Seguridad ante ataques**. El sistema operativo protege el sistema frente amenazas como virus informáticos, gusanos u otros ataques.
+    - **Seguridad ante ataques**. El sistema operativo protege el sistema frente amenazas como virus informáticos, gusanos u otros ataques.
 
 
 6. **Otras funciones**
