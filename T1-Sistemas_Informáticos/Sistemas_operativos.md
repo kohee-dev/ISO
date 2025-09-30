@@ -350,7 +350,7 @@ En general se puede decir que un sistema operativo tiene las siguientes funcione
     [Mas info](https://www.geeksforgeeks.org/operating-systems/device-management-in-operating-system/)
 
 
-5. **Protección y seguridad**: Los mecanismos de proteccion y seguridad de un sistema operativo tienen la funcion de salvaguardar los recursos del sistema de accesos no autorizados o usos malintencionados. Estos mecanismos permiten controlar a que recursos puede acceder cada usuario y permitir que unicamente los usuarios autorizados puedan realizar acciones especificas.
+5. **Protección y seguridad**: Los mecanismos de protección y seguridad de un sistema operativo tienen la función de salvaguardar los recursos del sistema de accesos no autorizados o usos malintencionados. Estos mecanismos permiten controlar a que recursos puede acceder cada usuario y permitir que unicamente los usuarios autorizados puedan realizar acciones especificas.
 
     ![alt text](../img/seguridad.png)
 
