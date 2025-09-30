@@ -261,7 +261,9 @@ A pesar de que hay otros tipos de interfaces de usuario (como por ejemplo interf
 
 En general se puede decir que un sistema operativo tiene las siguientes funciones.
 
-1. **Gestión de procesos**: La gestion de procesos en un sistema operativo se engarga de organizar los procesos del sistema, siendo un proceso un programa en funcionamiento.
+1. **Gestión de procesos**: La gestión de procesos en un sistema operativo se encarga de organizar los procesos del sistema, siendo un proceso un programa en funcionamiento.
+
+    ![alt text](../img/procesos.png)
 
     El ciclo de vida de un proceso comienza cuando un programa se ejecuta hasta que finaliza su ejecución y es el Sistema operativo quien se encarga de determinar:
     - Cuando puede usar la CPU
@@ -277,6 +279,8 @@ En general se puede decir que un sistema operativo tiene las siguientes funcione
     - **Sincronización de procesos**. 
         - Coordina varios procesos de forma simultanea para asegurar un orden de ejecucion y evitar deadlocks.
         - Utiliza mecanismos de sincronización como los semáforos para coordinar los procesos.
+    
+    [Mas info](https://www.geeksforgeeks.org/operating-systems/introduction-of-process-management/)
 
 2. **Gestión de memoria**: La gestión de memoria es una tarea esencial del sistema operativo que consiste en permitir el movimiento de los datos entre memoria principal y almacenamiento secundario. También permite la interacción entre memoria volátil y almacenamiento persistente.
 
@@ -295,6 +299,7 @@ En general se puede decir que un sistema operativo tiene las siguientes funcione
         - Gestiona es espacio libre en el disco.
         - Organiza el orden en el cual se realizan peticiones de lectura o escritura.
         - Permite que la información se pueda recuperar cuando surja un fallo.
+    [Mas info](https://www.geeksforgeeks.org/operating-systems/memory-management-in-operating-system/)
 
 3. **Gestión del sistema de ficheros**
 
@@ -330,8 +335,21 @@ En general se puede decir que un sistema operativo tiene las siguientes funcione
 4. **Gestión de dispositivos**
     ![alt text](../img/iom.png)
 
+    La gestión de dispositivos es la encargada de manejar la comunicación entre el sistema y los dispositivos hardware, como impresoras, discos o interfaces de red. El sistema operativo proporciona drivers para gestionar los dispositivos usando técnicas como DMA (Direct Memory Access) para la transferencia eficiente de información y estrategias como buffering o spooling para asegurar operaciones sencillas.
 
---WIP--
+    Hay varios componentes que intervienen en la gestión de dispositivos.
+
+    - **Drivers de dispositivos**. El SO usa los drivers para comunicarse con los dispositivos hardware. Hay dos tipos de hardware.
+        - **Drivers en el kernel**. Funciona en el kernel del SO permitiendo acceso al hardware.
+        - **Drivers en el espacio del usuario**. Funciona fuera del kernel y están mas aislados, proporcionando más seguridad pero peor rendimiento.
+    - **Buffering y Catching**. 
+        - Buffering. Almacena datos en memoria para gestionar las diferencias en velocidad entre los dispositivos.
+
+        - Catching: Permite acceder más rápido a memoria almacenando datos de uso más frecuente en memorias de más velocidad como la RAM.
+    - **Spooling**. Es una función del sistema que salva datos para su posterior proceso o impresión. Estos datos se almacenan en un archivo en spool. Los archivos en spool funcionan de forma similar a los archivos de cinta u otros archivos de dispositivo. Los archivos en spool le permiten gestionar los datos destinados a dispositivos conectados externamente como, por ejemplo, una impresora. Las funciones de spooling ayudan a los usuarios del servidor a gestionar las operaciones de entrada y salida de forma más eficiente.
+
+    [Mas info](https://www.geeksforgeeks.org/operating-systems/device-management-in-operating-system/)
+
 
 5. **Protección y seguridad**
 
