@@ -13,7 +13,7 @@ Esto les beneficia a ellos también, ya que si no se lo ponen fácil al mundo ed
 # Linux
 En la unidad anterior hemos visto que hay muchas distribuciones de Linux distintas, cada una de ellas preparada para resolver una serie de problemas ya definidos.
 
-A continuación os pongo las Imagenes de las distros de Linux
+A continuación os pongo las Imágenes de las distros de Linux
 
 ## Imagenes
 
